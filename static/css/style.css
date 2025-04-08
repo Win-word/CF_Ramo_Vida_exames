@@ -1,0 +1,79 @@
+body{
+    text-align: center;
+    background-color: darkcyan;
+}
+
+*{
+    text-align: center;
+}
+
+.conteiner{
+    padding: 0 5%;
+}
+
+
+/* main */
+
+main .conteiner .ask img{
+    width: 80%;
+    transition: 0.4s;
+}
+
+main .conteiner .ask button{
+    padding: 10px 10px;
+    color: black;
+    
+    border: none;
+    border-radius: 5px;
+}
+
+#b1{
+    background-color: #2474c3;
+    color: black;
+}
+
+#b2{
+    background-color: white;
+    color: black;
+
+}
+
+main .conteiner .res input{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    text-align: left;
+    
+}
+
+main .conteiner .res form button{
+    padding: 10px 5%;
+    border-bottom: 10px;
+    border-radius: 10px;
+    
+}
+
+main .conteiner .res textarea{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    text-align: left;
+}
+
+
+header .conteiner img{
+    width: 170px;
+}
+
+
+header{
+    color: white;
+}
+
+main .conteiner .res form{
+    text-align: left;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" >
+    <title>Exame CFRV</title>
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <img src="{{url_for('static', filename='img/logo/logobg.png')}}" alt="logo cfrv">
+        <h1>Centro de Formacao Ramo da Vida</h1>
+
+        </div>
+
+    </header>
+    <main>
+        <div class="conteiner"> 
+            <div class="ask">
+                <img id="imgExame" src="{{url_for('static', filename='exame/imageExame1.jpg')}}" alt="exame"><br>
+                <button onclick="changePage1()" id="b1"><b>1</b></button>
+                <button onclick="changePage2()" id="b2"><b>2</b></button>
+
+            </div>
+            <div class="res">
+                <form method="post" action="/">
+                    <input type="text" name="Nome Completo:" placeholder="Nome Completo">
+                    <input type="text" name="curso_" placeholder="Exame de: ">
+                    <input type="image" name="Bilhete de Identidade:" placeholder="tire foto o seu B.I/Cartao de Eleitoe ou Cedula">
+                    
+                    <textarea type="text" name="Respostas_Exame" placeholder="Escreva as respostas aqui!___ex: 1. escreve  resposta" ></textarea>
+                    <button type="submit">Submeter Resposta</button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- section And -->
+    <section>
+        <hr>
+        @desenvolvida pela <a href="#">BSofoft Tecnologias</a>
+    </section>
+    <!-- and section -->
+
+    
+<script src="js/main.js"></script>
+</body>
+</html>
