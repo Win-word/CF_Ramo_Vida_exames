@@ -95,12 +95,12 @@ def exame():
 
         #    return render_template("inscricao.html",titulof = "Carrega o Documento e o Certificado! para poder fazer Inscricaio.")
         
-        docf = request.files["documento_foto_"]
+        docf = request.files["documento_foto"]
 
         docname = docf.filename
 
         if docname == "":
-            return render_template("inscricao.html",titulof = "os documentos estao Corrompidos.")
+            return render_template("index.html",titulof = "os documentos estao Corrompidos.")
 
         #crie uma coisa para checar a instecao
 
@@ -116,11 +116,11 @@ def exame():
                 respo = "Erro ao Submeter "+str(e)+""
                 print(respo)
 
-            return render_template("inscricao.html",titulof = respo)
+            return render_template("index.html",titulof = respo)
 
         except Exception as e2:
             print("error")
-            return render_template("inscricao.html",titulof = "Err "+str(e2) )
+            return render_template("index.html",titulof = "Err "+str(e2) )
             print(e2)
 
 
@@ -132,7 +132,7 @@ def exame():
     else:
         print("formulario InValido")
         
-    return render_template("inscricao.html",titulof = "Inscreva se no CFRV" )
+    return render_template("index.html",titulof = "Inscreva se no CFRV" )
 
 
 
