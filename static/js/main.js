@@ -8,7 +8,7 @@ var cp = document.getElementById("imgExame");
 
 function changePage1(){
     //alert("pagina 1");
-    cp.src = "/static/exame/imageExame11.jpg";
+    cp.src = "/static/exame/imageExame11.png";
     b1.style.background = "#2474c3";
     b2.style.background = "white";
 
@@ -20,7 +20,7 @@ function changePage1(){
 function changePage2(){
     //alert("pagina 2");
     
-    cp.src = "/static/exame/imageExame22.jpg";
+    cp.src = "/static/exame/imageExame22.png";
     b2.style.background = "#2474c3";
     b1.style.background = "white";
 
