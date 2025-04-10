@@ -132,7 +132,7 @@ def exame():
     else:
         print("formulario InValido")
         
-    return render_template("index.html",errorS= "Responda Adequadamente as Respostas." )
+    return render_template("index.html",errorS= "Responda Adequadamente o Exame." )
 
 
 
