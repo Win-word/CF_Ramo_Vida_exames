@@ -6,6 +6,7 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import datetime
+import os
 
 app = Flask(__name__)
 
@@ -20,8 +21,9 @@ def enviarMSG(nome,docfn,curso,respo_exame):
     data = datetime.datetime.now()
 
     data = str(data).split(".")[0]
+    respo_ex = respo_exame.replace("\n","<br>")
 
-    todamsg = "nome: "+ nome+"\nData de Realizacao: "+data+"\nCurso: "+curso+"\nrespostas: "+respo_exame
+    todamsg = "nome: "+ nome+"\n<br>Data de Realizacao: "+data+"\n<br>Curso: "+curso+"\n<br>respostas: "+respo_ex
 
 
     msg = MIMEMultipart()
@@ -72,7 +74,7 @@ def enviarMSG(nome,docfn,curso,respo_exame):
     s.sendmail(msg["From"],[msg["To"]],msg.as_string())
     s.quit()
 
-    return "Inscricao Feita Com Sucesso!"
+    return nome
 
 
 
@@ -105,13 +107,13 @@ def exame():
         #crie uma coisa para checar a instecao
 
 
-        docf.save(os.path.join("/static/docsb",docname))
+        docf.save(os.path.join("static/docsb",docname))
         
         try:
             print("nome:", nome)
             print("doc", str(docname))
             try:
-                respo= enviarMSG(nome,docname,curso,respo_exame)
+                respo= enviarMSG(nome,docname,curso,respo)
             except Exception as e:
                 respo = "Erro ao Submeter "+str(e)+""
                 print(respo)

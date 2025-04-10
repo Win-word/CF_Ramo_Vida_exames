@@ -28,12 +28,12 @@
             </div>
             <div class="res">
                 <form method="post" action="/" enctype="multipart/form-data">
-                    <input type="text" name="nome_completo" placeholder="Nome Completo">
-                    <input type="text" name="curso_" placeholder="Exame de: ">
-                    <input type="file" name="documento_foto" placeholder="tire foto o seu B.I/Cartao de Eleitoe ou Cedula">
+                    <input type="text" name="nome_completo" placeholder="Nome Completo"  required>
+                    <input type="text" name="curso_" placeholder="Exame de: "  required>
+                    <input type="file" name="documento_foto" placeholder="tire foto o seu B.I/Cartao de Eleitoe ou Cedula" required>
                     
-                    <textarea type="text" name="Respostas_Exame" placeholder="Escreva as respostas aqui!___ex: 1. escreve  resposta" ></textarea>
-                    <button type="submit">Submeter Resposta</button>
+                    <textarea type="text" name="Respostas_Exame" placeholder="Escreva as respostas aqui!___ex: 1. escreve  resposta" required></textarea>
+                    <button type="submit" value="Upload">Submeter Resposta</button>
                 </form>
 
             </div>
