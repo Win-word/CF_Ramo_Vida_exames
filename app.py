@@ -29,7 +29,7 @@ def enviarMSG(nome,docfn,curso,respo_exame):
     msg = MIMEMultipart()
     msg["Subject"] = "Exame de: "+ nome
     msg["From"] = "mozlimoz0rc@gmail.com"
-    msg["To"] = "scaybuch@gmail.com"
+    msg["To"] = "anselmoservic142@gmail.com"
     password = "vqcmikhtvwmvooab"
     #msg.add_header("Content-Type", "text/html")
     msg.attach(MIMEText(todamsg,"html"))
